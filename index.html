@@ -7,17 +7,19 @@
     <meta name="Keywords" content="bugz">
     <meta name="Description" content="Starter Game">
 <!--    <SCRIPT LANGUAGE="JavaScript" src="..\js\bugz.js"></SCRIPT> -->
-    <link rel="stylesheet" type="text/css" href="..\css\bugz.css">
+    <link rel="stylesheet" type="text/css" href="..\bugz\css\bugz.css">
 </HEAD>
 
 <BODY>
 <div id="homePage">
-    <div id="hpBanner">Welcome to<br/><div id="bugz">BugZ!</div>
-    </div>
-    <div id="body">
-        <div id="hpNews"></div>
-        <div id="hpNews"></div>
-        <div id="ads"></div>
+    <div id="bodyFrame">
+        <div id="hpBanner">Welcome to <span id="bugzTitle">BugZ!</span></div>
+        <div id="gameCell">
+            <div id="hpNews"></div>
+            <div id="hpGameStart"><a href="UI/bugz.html">Play BugZ!</a><br/><br/>
+                <button onclick="window.location.href='UI/bugz.html'">Play BugZ!</button></div>
+            <div id="ads"></div>
+        </div>
     </div>
 </div>
 </BODY>
