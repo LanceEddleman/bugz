@@ -1,293 +1,141 @@
-/* Author: Ozzland, Blank Themes */
-
-*{margin:0; padding:0; border:0;}
-
-/* ************************************ Site Body ********************************** */
+@charset "utf-8";
 body {
-//	background: url('../images/background-overlay.png') top center repeat-x;
-	background-color: #ececec;
-	font-family: 'Rancho', cursive;
-	font-size: 25px;
-	color: #000000;
-}
-
-body, input, textarea {
-	color: #111;
-}
-
-/* ************************************ Home Page ********************************** */
-#homePage{
-//	background-color: #fff;
-	background: url('../images/background-overlay.png') top center repeat-x;
-    background-color: #ececec;
-   	color: #000000;
-}
-
-#bodyFrame {
-	background-color: red;
-	width: 1280px;
-   	height: 800px;
-	margin: 0 auto;
-	text-align: center;
-//	border-bottom-right-radius: 15px;
-//	border-top-right-radius: 15px;
-//	border-bottom-left-radius: 15px;
-// 	border-top-left-radius: 15px;
-}
-
-#hpBanner{
-	background-color: #fff; //white
-	width: 100%;
-	height: 70px;
-	text-align: center;
-	border-top-right-radius: 15px;
-	border-top-left-radius: 15px;
-}
-
-#bugzTitle {
-//	width: 50%;
-//	height: 100px;
-//	text-align: left;
-	font-size: 45px;
-	color: red;
-//	position: relative;
-//	display: block;
-//	margin: 0 auto;
-//	left: 0px;
-}
-
-#gameCell{
-	clear: both;
-	display: block;
-	background-color: #000;
-	width: 100%;
-	max-height: 100%;
-	height: 730px;
-	border-bottom-right-radius: 15px;
-	border-top-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-   	border-top-left-radius: 15px;
-}
-
-#hpGameStart a {
-	position: absolute;
-	float: right;
-	background-color: #ffffff;
-	height: 40px;
-	width: 150px;
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	text-decoration: none;
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #4E5869;
+	margin: 0;
+	padding: 0;
 	color: #000;
 }
 
-#hpNews {
-	background-color: #CC0;	
-	height: 700px;
-	width: 1080px;
-	position: absolute;
-	float: left;
-	}
-
-#ads {
-	position: absolute;
-	float: right;
-	height: 400px;
-	width: 200px;
-	background-color: #096;
-	}
-
-.hpGameStartButton {
-	font-size: 20px;
-    color: #000000;
-    text-decoration: none;
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
 }
-//	:hover and :active styles left as an exercise for the reader.
-
-/* Alignment */
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 11px;
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any following elements. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. */
 }
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 11px;
-}
-.aligncenter {
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
 }
 
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
 
-/* ************************************ Page Layout ********************************** */
-.pagearea {
-	width: 810px;
-	height: 750px;
-	position: absolute;
-	display: block;
-	float: left;
-}
-#pagetitle {
-	color: #fff;
-	font-family: 'Buda', cursive;
-	font-size: 36px;
-	font-variant: small-caps;
-	font-weight: bolder;
-	position: absolute;
-	text-align: center;
-	text-shadow: 1px 3px 3px #f16600;
-	top: -10px;
-	width: 760px;
-}
-#pagesubtitle {
-	color: #fff;
-	font-family: 'Tangerine', serif, "arial", verdana, times;
-	font-size: 30px;
-	font-variant: small-caps;
-	font-weight: bolder;
-	text-align: center;
-	text-shadow: 1px 3px 3px #f16600;
-	width: 700px;
-	margin-bottom: 10px;
-}
-hr.fade {
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-}
-#pagebody {
-	position: absolute;
-	float: left;
-	top: 35px;
-//	background-color: blue;
-}
-#pagefullbody {
-	position: absolute;
-	top: 35px;
-	width: 780px;
-	height: 712px;
-	display:block;
-	float: left;
-//	background-color: blue;
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.container {
+	width: 80%; /* 80% of the screen size */
+	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. */
+	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. */
+	height: 100%;
+	max-height: auto;
+	min-height: 600px;
+	background: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
 }
 .scrollcolumn {
 	overflow-y: auto;
 	overflow-x: hidden;
-	height: 710px;
-	width: 735px;
+	height: auto;
+	height: 740px;
+	max-height: auto;
+	min-height: 600px;
 }
-.left_image{
-	float: left;
-	margin-right: 10px;
-	margin-bottom: 5px;
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background: #6F7D94;
 }
-.center_image{
-	clear: both;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-}
-.right_image{
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
 	float: right;
-	margin-left: 10px;
-	margin-bottom: 5px;
+	width: 20%;
+	height: 750px;
+	background: #93A5C4;
+	padding-bottom: 10px;
 }
-#row {
-	position: absolute;
+.content {
+	padding: 10px 0;
+	width: 60%;
 	float: left;
-	width: 715px;
 }
-.row {
-	position: absolute;
+.sidebar2 {
 	float: left;
-	width: 715px;
-}
-.rowfloat {
-	position: relative;
-	float: left;
-	width: 715px;
-}
-.rowfullwidth {
-	position: relative;
-	float: left;
-	width: 780px;
-//	background-color: red;
-}
-.row_text{
-	margin-top: 10px;
-	margin-left: 10px;
-	width: 700px;
-}
-.frame {
-	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+	width: 20%;
+	height: 740px;	
+	background: #93A5C4;
+	padding: 10px 0;
 }
 
-#column1 {
-	position: absolute;
-	float: left;
-	height: 710px;
-	width:355px;
-//	background-color: blue;
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
 }
 
-#column2 {
-	position: relative;
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	background: #8090AB;
+	color: #000;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #6F7D94;
+	color: #FFF;
+}
+
+/* ~~The footer ~~ */
+.footer {
+	padding: 10px 0;
+	background: #6F7D94;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/* ~~miscellaneous float/clear classes~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
 	float: right;
-	height: 710px;
-	width: 355px;
-//	background-color: orange;
+	margin-left: 8px;
 }
-.center_img {
-	position: relative;
-	text-align: center;
-}
-
-.group:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.rowcopyright {
-	position: absolute;
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
 	float: left;
-	height: 20px;
-	width: 750px;
-	top: 725px;
-	margin-left: 10px;
-
+	margin-right: 8px;
 }
-.copyright {
-	position: absolute;
-	font-size: 18px;
-}
-#presscolumn1 {
-	position: absolute;
-	float: left;
-	height: 710px;
-	width: 200px;
-//	background-color: blue;
-}
-
-#presscolumn2 {
-	position: relative;
-	float: right;
-	height: 710px;
-	width: 515px;
-//	background-color: orange;
-}
-.pressclass {
-	font-size: 18px !important;
-	line-height: 18px;
-	text-align: center;
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
 }

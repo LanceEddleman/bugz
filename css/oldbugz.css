@@ -1,0 +1,286 @@
+/* Author: Ozzland, Blank Themes */
+
+*{margin:0; padding:0; border:0;}
+
+/* ************************************ Site Body ********************************** */
+body {
+//	background: url('../images/background-overlay.png') top center repeat-x;
+	background-color: #ececec;
+	font-family: 'Rancho', cursive;
+	font-size: 25px;
+	color: #000000;
+}
+
+body, input, textarea {
+	color: #111;
+}
+
+/* ************************************ Home Page ********************************** */
+#homePage{
+//	background-color: #fff;
+	background: url('../images/background-overlay.png') top center repeat-x;
+    background-color: #ececec;
+   	color: #000000;
+}
+
+#bodyFrame {
+	background-color: red;
+	width: 1280px;
+   	height: 800px;
+	margin: 0 auto;
+	text-align: center;
+//	border-bottom-right-radius: 15px;
+//	border-top-right-radius: 15px;
+//	border-bottom-left-radius: 15px;
+// 	border-top-left-radius: 15px;
+}
+
+#hpBanner{
+	background-color: #fff; //white
+	width: 100%;
+	height: 70px;
+	text-align: center;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;
+}
+
+.bugzTitle {
+	font-size: 45px;
+	color: red;
+}
+
+#gameCell{
+	clear: both;
+	display: block;
+	background-color: #000;
+	width: 100%;
+	max-height: 100%;
+	height: 730px;
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+   	border-top-left-radius: 15px;
+}
+
+#hpGameStart a {
+	position: absolute;
+	float: right;
+	background-color: #ffffff;
+	height: 40px;
+	width: 150px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	text-decoration: none;
+	color: #000;
+}
+
+#hpNews {
+	background-color: #CC0;	
+	height: 700px;
+	width: 1080px;
+	position: absolute;
+	float: left;
+	}
+
+#ads {
+	position: absolute;
+	float: right;
+	height: 400px;
+	width: 200px;
+	background-color: #096;
+	}
+
+.hpGameStartButton {
+	font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+}
+//	:hover and :active styles left as an exercise for the reader.
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 11px;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 11px;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/* ************************************ Page Layout ********************************** */
+.pagearea {
+	width: 810px;
+	height: 750px;
+	position: absolute;
+	display: block;
+	float: left;
+}
+#pagetitle {
+	color: #fff;
+	font-family: 'Buda', cursive;
+	font-size: 36px;
+	font-variant: small-caps;
+	font-weight: bolder;
+	position: absolute;
+	text-align: center;
+	text-shadow: 1px 3px 3px #f16600;
+	top: -10px;
+	width: 760px;
+}
+#pagesubtitle {
+	color: #fff;
+	font-family: 'Tangerine', serif, "arial", verdana, times;
+	font-size: 30px;
+	font-variant: small-caps;
+	font-weight: bolder;
+	text-align: center;
+	text-shadow: 1px 3px 3px #f16600;
+	width: 700px;
+	margin-bottom: 10px;
+}
+hr.fade {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+#pagebody {
+	position: absolute;
+	float: left;
+	top: 35px;
+//	background-color: blue;
+}
+#pagefullbody {
+	position: absolute;
+	top: 35px;
+	width: 780px;
+	height: 712px;
+	display:block;
+	float: left;
+//	background-color: blue;
+}
+.scrollcolumn {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 710px;
+	width: 735px;
+}
+.left_image{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+.center_image{
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.right_image{
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+#row {
+	position: absolute;
+	float: left;
+	width: 715px;
+}
+.row {
+	position: absolute;
+	float: left;
+	width: 715px;
+}
+.rowfloat {
+	position: relative;
+	float: left;
+	width: 715px;
+}
+.rowfullwidth {
+	position: relative;
+	float: left;
+	width: 780px;
+//	background-color: red;
+}
+.row_text{
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 700px;
+}
+.frame {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#column1 {
+	position: absolute;
+	float: left;
+	height: 710px;
+	width:355px;
+//	background-color: blue;
+}
+
+#column2 {
+	position: relative;
+	float: right;
+	height: 710px;
+	width: 355px;
+//	background-color: orange;
+}
+.center_img {
+	position: relative;
+	text-align: center;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.rowcopyright {
+	position: absolute;
+	float: left;
+	height: 20px;
+	width: 750px;
+	top: 725px;
+	margin-left: 10px;
+
+}
+.copyright {
+	position: absolute;
+	font-size: 18px;
+}
+#presscolumn1 {
+	position: absolute;
+	float: left;
+	height: 710px;
+	width: 200px;
+//	background-color: blue;
+}
+
+#presscolumn2 {
+	position: relative;
+	float: right;
+	height: 710px;
+	width: 515px;
+//	background-color: orange;
+}
+.pressclass {
+	font-size: 18px !important;
+	line-height: 18px;
+	text-align: center;
+}
