@@ -19,6 +19,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
 	border: none;
+	padding: none;
+	margin: none;
 }
 
 /* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
@@ -57,6 +59,9 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 /* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
 .header {
 	background: #6F7D94;
+	height: 90px;
+	display: block;
+	background: url('../images/background-overlay.png') top center repeat-x;
 }
 
 /* ~~ These are the columns for the layout. ~~ 
@@ -139,3 +144,38 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 	font-size: 1px;
 	line-height: 0px;
 }
+
+.logor {
+	float: right;
+	right: 0px;
+	margin-right: 15px;
+}
+.logol {
+	float: left;
+	margin-left: 15px;
+}
+.table{
+	display: table;
+}
+.trow{
+	display: table-row;
+}
+.tcell{
+	display: table-cell;
+}
+.mainTitle {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 90px;
+	font-size: 30px;
+	color: #4E5869;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.bugzTitle {
+	color: #000;
+//	text-shadow: -1px 0 #F87, 0 1px #F87, 1px 0 #F87, 0 -1px #F87;
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;	
+//	text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+
+}
+
