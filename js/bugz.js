@@ -64,29 +64,29 @@ var totalWeight = function() {
 
 //BugFunctionz =========================================================================
 var createCharacter = function() {
-	var Welcome = confirm("Welcome to the Character Creator")
-	var Name = prompt("Please choose a name.")
-	var Gender = prompt("Please choose a gender.")
-	var Location = prompt("Do you know where you are?").toUpperCase()
-	console.log("Name: " + Name)
-	console.log("Gender: " + Gender)
+	var welcome = confirm("Welcome to the Character Creator")
+	var name = prompt("Please choose a name.")
+	var gender = prompt("Please choose a gender.")
+	var location = prompt("Do you know where you are?").toUpperCase()
+	console.log("Name: " + name)
+	console.log("Gender: " + gender)
 
-	switch(Location) {
+	switch(location) {
 	case 'NO':
-		var Location = "New Eden"
-		console.log("Location: " + Location)
+		var location = "New Eden"
+		console.log("Location: " + location)
 		break;
 	case 'YES':
-		var Location = prompt("Where are you?", "Type where you are here")
-		console.log("Location: " + Location)
+		var location = prompt("Where are you?", "Type where you are here")
+		console.log("Location: " + location)
 		break;
 	default:
-		var Location = "New Eden"
-		console.log("Location: " + Location)
+		var location = "New Eden"
+		console.log("Location: " + location)
 	}
-	document.getElementById("Name").innerHTML = Name;
-	document.getElementById("Gender").innerHTML = Gender;
-	document.getElementById("Location").innerHTML = Location;
+	document.getElementById("Name").innerHTML = name;
+	document.getElementById("Gender").innerHTML = gender;
+	document.getElementById("Location").innerHTML = location;
 };
 
 var abilities = function(){
