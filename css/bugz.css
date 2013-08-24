@@ -1,12 +1,105 @@
 @charset "utf-8";
+html,
 body {
+	margin: 0; padding: 0; height: 100%;
 //	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	font-family: 'New Rocker', cursive;
-	background: #4E5869;
-	margin: 0;
-	padding: 0;
-	color: #000;
+	background: #4E5869; color: #000;
 }
+
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+#wrapper {
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+//	width: 80%; /* 80% of the screen size */
+	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. */
+	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. */
+	background: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+#header {
+	text-align: center;
+//	padding: 10px;
+	background: #6F7D94;
+	height: 90px;
+	display: block;
+	background: url('../images/background-overlay.png') top center repeat-x;
+}
+
+#content {
+//	padding-bottom:70px; /* Height of the footer element */
+	max-height: 100%;
+	display: table;
+	overflow: hidden;
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
+	position: relative;
+	display: table-cell;
+	height: 100%;
+	min-height: 100%;
+	float: right;
+	width: 20%;
+	background: #93A5C4;
+	padding-bottom: 10px;
+}
+
+.centerbar {
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	min-height: 100%;
+	width: 60%;
+	float: left;
+	background: #fff;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.sidebar2 {
+	position: relative;
+	display: table-cell;
+	height: 100%;
+	min-height: 100%;
+	float: left;
+	width: 20%;
+	background: #93A5C4;
+	padding: 10px 0;
+}
+
+/* ~~The footer ~~ */
+#footer {
+	width:100%;
+	height:70px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	background: #6F7D94;
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+.footer_text {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 20px;
+	color: #6F7D94;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 16px;
+}
+
 
 /* ~~ Element/tag selectors ~~ */
 ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
@@ -37,64 +130,6 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	text-decoration: none;
 }
 
-/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
-.container {
-	width: 80%; /* 80% of the screen size */
-	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. */
-	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. */
-	height: 100%;
-	max-height: auto;
-	min-height: 600px;
-	background: #FFF;
-	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
-}
-.scrollcolumn {
-	overflow-y: auto;
-	overflow-x: hidden;
-	height: auto;
-	height: 740px;
-	max-height: auto;
-	min-height: 600px;
-}
-
-/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
-.header {
-	background: #6F7D94;
-	height: 90px;
-	display: block;
-	background: url('../images/background-overlay.png') top center repeat-x;
-}
-
-/* ~~ These are the columns for the layout. ~~ 
-
-1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
-
-2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
-
-3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference.
-
-4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
-
-*/
-.sidebar1 {
-	float: right;
-	width: 20%;
-	height: 750px;
-	background: #93A5C4;
-	padding-bottom: 10px;
-}
-.content {
-	padding: 10px 0;
-	width: 60%;
-	float: left;
-}
-.sidebar2 {
-	float: left;
-	width: 20%;
-	height: 740px;	
-	background: #93A5C4;
-	padding: 10px 0;
-}
 
 /* ~~ This grouped selector gives the lists in the .content area space ~~ */
 .content ul, .content ol { 
@@ -122,14 +157,6 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 	color: #FFF;
 }
 
-/* ~~The footer ~~ */
-.footer {
-	padding: 10px 0;
-	background: #6F7D94;
-	position: relative;/* this gives IE6 hasLayout to properly clear */
-	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
-}
-
 /* ~~miscellaneous float/clear classes~~ */
 .fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
 	float: right;
@@ -147,13 +174,25 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 }
 
 .logor {
+	text-align: center;
 	float: right;
 	right: 0px;
-//	margin-right: 15px;
+	height: 90px;
+	width: 20%;
 }
+.logo_text {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 90px;
+	text-shadow: 0 0 10px #fefcc9, 0 0 20px #feec85, 0 0 30px #ffae34, 0 0 40px #ec760c, 0 0 70px #cd4606, 0 0 80px #973716, 0 0 100px #451b0e, 0 0 150px #451b0e;
+	font-size: 23px;
+}
+
 .logol {
+	text-align: center;
 	float: left;
-//	margin-left: 15px;
+	height: 90px;
+	width: 20%;
 }
 .table{
 	display: table;
@@ -166,17 +205,17 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 }
 .mainTitle {
 	text-align: center;
+	text-align: center;
 	vertical-align: middle;
-	line-height: 90px;
+	line-height: 45px;
 	font-size: 30px;
 	color: #4E5869;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-.bugzTitle {
+.bugzShadow {
 	color: #000;
 //	text-shadow: -1px 0 #F87, 0 1px #F87, 1px 0 #F87, 0 -1px #F87;
-	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;	
 //	text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
-
+//	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;	
+	text-shadow: 0 0 10px #fefcc9, 0 0 20px #feec85, 0 0 30px #ffae34, 0 0 40px #ec760c, 0 0 70px #cd4606, 0 0 80px #973716, 0 0 100px #451b0e, 0 0 150px #451b0e;
 }
-

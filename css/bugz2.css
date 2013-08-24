@@ -1,0 +1,55 @@
+/* CSS Document */
+
+html, body {
+       height: 100%;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'New Rocker', cursive;
+	background: #4E5869; color: #000;
+}
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+div#wrapper {
+	position: relative;
+//	width: 80%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0px auto -40px auto;
+	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. */
+	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. */
+	background: #FFF;
+//	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+
+}
+ 
+div#header_wrapper {
+       width: 100%;
+       height: 40px;
+    	  background: red;
+}
+
+div#content_wrapper {
+       width: 100%;
+       padding: 0px 0px 40px 0px;
+    	  background: green;
+}
+
+div#footer_wrapper {
+       width: 100%;
+       height: 40px;
+    	  background: blue;
+}
+
+div#header_wrapper, div#footer_wrapper, div#content_wrapper {
+       min-width: 942px;
+    	  background: orange;
+}
+
+div#header_inner_wrapper, div#footer_inner_wrapper, div#content_inner_wrapper {
+       width: 942px;
+       margin: 0px auto;
+    	  background: pink;
+}
