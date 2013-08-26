@@ -36,6 +36,7 @@ body {
 	background: url('../images/background-overlay.png') top center repeat-x;
 }
 
+/* Content */
 #content {
 	position: relative;
 	margin-bottom: 70px;
@@ -47,7 +48,7 @@ body {
 	display: table;
 	overflow: hidden;
 }
-/* ***** Footer ***** */ 
+/* Footer  */ 
 #footer {
 	width:100%;
 	height: 70px;
@@ -86,6 +87,7 @@ body {
 .bugzShadow {
 	color: #000;
 	text-shadow: 0 0 10px #fefcc9, 0 0 20px #feec85, 0 0 30px #ffae34, 0 0 40px #ec760c, 0 0 70px #cd4606, 0 0 80px #973716, 0 0 100px #451b0e, 0 0 150px #451b0e;
+/* other shadow properties */
 //	text-shadow: -1px 0 #F87, 0 1px #F87, 1px 0 #F87, 0 -1px #F87;
 //	text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
 //	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;	
@@ -94,18 +96,12 @@ body {
 
 /* ***** Content subset start ***** */
 #leftcolumn {
-	display: table-cell;
-	min-height: 100% !important;
 	float: left;
-	width: 20% !important;
 	background: #93A5C4;
 }
 
 #rightcolumn {
-	display: table-cell;
-	min-height: 100% !important;
 	float: right;
-	width: 20% !important;
 	background: #93A5C4;
 }
 
@@ -118,6 +114,12 @@ body {
 	overflow-y: auto;
 	overflow-x: hidden;
 	background: orange;
+}
+
+.columnbasic {
+	display: table-cell;
+	min-height: 100% !important;
+	width: 20% !important;
 }
 /* ***** Content subset end ***** */
 /* ***** footer subset start ***** */

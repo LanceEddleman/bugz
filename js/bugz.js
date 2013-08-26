@@ -89,6 +89,7 @@ var createCharacter = function() {
 	document.getElementById("Location").innerHTML = location;
 };
 
+// abilities
 var abilities = function(){
 	var health = 0;
 	var strength = 0;
@@ -169,3 +170,27 @@ var abilities = function(){
 //	abilities()
 //};
 
+
+function show(page)
+{
+	var html = "";
+	switch(page)
+	{
+		case "homepage": html = homePage;break;
+		case "comingsoon": html = comingsoonPage;break;
+		case "about": html = aboutPage;break;
+		case "news": html = newsPage;break;
+		default: html = homePage;
+	}
+	document.getElementById('center').innerHTML = html;
+}
+
+var homePage = 'This is the homepage THIS ONE<br /> \
+...<p>content center<br/>content center<br/> \
+... das dashflajks hflaskjdh <br/> \
+flaksjdh flsdjkfh lasdkjf halsdjkf halsdj fhlasdj fhlaskdjfh laskdjfh <br/>  \
+lasdkj fhalsd jkfaslh sdlaj fhsldkj hasdljk fhalsdkjh<br/>adfdsjhl <br/>  \
+Last Row<br/></p>';
+var comingsoonPage = "This is the coming soon page<br />...";
+var aboutPage = "This is the about page<br />...";
+var newsPage = "This is the news page<br />...";
