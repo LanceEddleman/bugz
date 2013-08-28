@@ -1,5 +1,8 @@
 @charset "utf-8";
 /* ***** HTML and Body ***** */ 
+
+*{margin:0; padding:0; border:0; display:block;}
+
 html,
 body {
 	position: absolute;
@@ -11,51 +14,59 @@ body {
 	background: #4E5869; color: #000;
 	top: 0;
 	bottom: 0;
+	overflow: auto;
 }
 
 /* ***** Wrapper ***** */ 
 #wrapper { /* wrapper surrounds all other divs giving percentage-based width. */
-	min-height: 50%;
-	height: 100% !important;
 	position: relative;
+	height: 100% !important;
+	min-height: 100% !important;
 	width: 80%; /* 80% of the screen size. */
 	max-width: 1260px;/* max-width desirable to keep layout from getting too wide on large monitors. */
 	min-width: 780px;/* min-width desirable to keep layout from getting too narrow. Also keeps line length more readable in columns. */
 	margin: 0 auto 0 auto;
-	background-color: #000;
+	background-color: #123;
 }
 
 /* Header */
 #header { /* Header has no width. Extends full width of layout. */
+	position: absolute;
+	width: 100%;
+	max-width: 1260px;/* max-width desirable to keep layout from getting too wide on large monitors. */
+	min-width: 780px;/* min-width desirable to keep layout from getting too narrow. Also keeps line length more readable in columns. */
 	text-align: center;
-	display: block;
 	height: 90px;
 	line-height: 90px;
 	font-size: 23px;
-	background: #6F7D94;
+	background: #fff;
 	background: url('../images/background-overlay.png') top center repeat-x;
 }
 
 /* Content */
 #content {
-	position: relative;
-	margin-bottom: 70px;
-	background-color: #93A5C4;
-	height: 85% !important;
-	min-height: 85% !important;
-	max-height: 85%;
+	position: absolute;
+	top: 90px !important;
+	bottom: 70px !important;
+	background: #fff;
+	min-height: auto !important;
+	max-height: 100%;
 	width: 100%;
-	display: table;
-	overflow: hidden;
+	display: block;
+	overflow: auto;
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
 }
 /* Footer  */ 
 #footer {
+	position: absolute;
+	text-align: center;
 	width:100%;
 	height: 70px;
-	position: absolute;
 	bottom: 0px;
-	left: 0px;
-	background: #6F7D94;
+	max-width: 1260px;/* max-width desirable to keep layout from getting too wide on large monitors. */
+	min-width: 780px;/* min-width desirable to keep layout from getting too narrow. Also keeps line length more readable in columns. */
+	margin: 0 auto 0 auto;
+	background: #fff;
 	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
 }
 
@@ -106,9 +117,6 @@ body {
 }
 
 #center {
-	display: table-cell;
-	height: 99% !important;
-	min-height: 99% !important;
 	float: left;
 	width: 60% !important;
 	overflow-y: auto;
@@ -117,32 +125,26 @@ body {
 }
 
 .columnbasic {
-	display: table-cell;
+	display: block;
+//	height: 90% !important;
 	min-height: 100% !important;
 	width: 20% !important;
 }
 /* ***** Content subset end ***** */
 /* ***** footer subset start ***** */
 #footerleft {
-	display: table-cell;
-	min-height: 100% !important;
 	float: left;
 	width: 20% !important;
 	background: #6F7D94;
 }
 
 #footerright {
-	display: table-cell;
-	min-height: 100% !important;
 	float: right;
 	width: 20% !important;
 	background: #6F7D94;
 }
 
 #footercenter {
-	display: table-cell;
-	height: 99% !important;
-	min-height: 99% !important;
 	float: left;
 	width: 60% !important;
 	overflow-y: auto;
