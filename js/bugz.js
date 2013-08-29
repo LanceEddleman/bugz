@@ -170,19 +170,33 @@ var abilities = function(){
 //	abilities()
 //};
 
-
 function show(page)
 {
+//	console.log('initial setting' + htmlActive);
 	var html = "";
+//	var htmlActive = page;
+//	console.log('afterset' + htmlActive);
 	switch(page)
 	{
 		case "homepage": html = homePage;break;
 		case "comingsoon": html = comingsoonPage;break;
 		case "about": html = aboutPage;break;
 		case "news": html = newsPage;break;
-		default: html = homePage;
+    	default: html = homePage;
+//        default: html = if (htmlActive = '')
+//                        {	default: html = homePage;  	}
+//                        else {  default: html = htmlActive;	}
+
 	}
+//    if (htmlActive == '';){
+//    html = default;
+//    }
+//    else {
+//    html = page;
+//    }
 	document.getElementById('center').innerHTML = html;
+	console.log(page);
+//	console.log('after function' + htmlActive);
 }
 
 var homePage = 'This is the homepage THIS ONE<br /> \
