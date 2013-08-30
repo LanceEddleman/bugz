@@ -175,7 +175,16 @@ var abilities = function(){
 //	Display page information
 function show(page)
 {
-//	var html = "";
+	var html = "";
+	 if (html === 'news')
+		{ html = 'news'; }
+	 else if (html === 'about')
+		{ html = 'about'; }
+	 else if (html === 'comingsoon')
+		{ html = 'comingsoon'; }
+	 else
+	 	{html = 'homepage';}
+
 	switch(page)
 	{
 		case "homepage": html = homePage;break;
@@ -210,7 +219,7 @@ window.onload=function() {
 	html = comingsoon;	
 	}
 	else {
-	html = homepage;	
+	html = news;	
 	}
 }
 
