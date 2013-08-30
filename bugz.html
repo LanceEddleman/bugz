@@ -2,20 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
 		<link href='http://fonts.googleapis.com/css?family=New+Rocker' rel='stylesheet' type='text/css'>
-		<meta charset="utf-8">
+        <meta charset="UTF-8">
 		<meta name="Generator" content="DreamWeaver, EditPlus, IntelliJ">
 		<meta name="Author" content="Ozzland & Cor-hay Jones">
 		<meta name="Keywords" content="bugz">
 		<meta name="Description" content="Starter Game">
 		<title>BugZ!!!</title>
 		<link rel="stylesheet" type="text/css" href="css/bugz.css" media="screen" charset="utf-8" />
-		<SCRIPT LANGUAGE="JavaScript" src="js\bugz.js"></SCRIPT>
+		<script type="text/javascript" language="JavaScript" src="js\bugz.js"></script>
 		<!--[if lte IE 7]>
 		<style> .content { margin-right: -1px; } /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */
 		ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it needs to correct extra whiltespace between the links */ </style>
 		<![endif]-->
 	</head>
-<body onLoad="show();">
+<body onLoad="show(localStorage.getItem('html'));">
 	<div id="wrapper"><!-- wrapper start -->
 		<div id="header"><!-- header start -->
 			<div id="logoleft" class="logol bugzShadow">Cor-hay Jones</div>
@@ -31,13 +31,13 @@
 			<div id="rightcolumn" class="columnbasic">
 				<ul class="nav">
 					<li><a href="UI/bugz.html">Play BugZ!</a></li>
-					<li><a href="#homepage" onclick="show('homepage'); value='homepage';">Home</a></li>
-					<li><a href="#news" onclick="show('news'); value='news'">News</a></li>
-					<li><a href="#about" onclick="show('about'); value='about'">About</a></li>
-					<li><a href="#comingsoon" onclick="show('comingsoon');value='comingsoon'">Coming Soon</a></li>
+					<li><a href="#homepage" onclick="show('homepage');">Home</a></li>
+					<li><a href="#news" onclick=" show('news');">News</a></li>
+					<li><a href="#about" onclick="show('about');">About</a></li>
+					<li><a href="#comingsoon" onclick="show('comingsoon');">Coming Soon</a></li>
 				</ul>
 				<!--<button onclick="window.location.href='UI/bugz.html'">Play BugZ!</button><br/>-->
-				<p>The information in this field will describe what the link above it do when you hover it shouuld ahve a background water mark image with the text floating over it.</p>
+				<p>The information in this field will describe what the link above it do when you hover it should have a background water mark image with the text floating over it.</p>
 				<p>This will look cool you will ike it once it is working.</p>
 				<p>The Doctor..</p>
 				<!-- end .rightcolumn -->

@@ -176,22 +176,13 @@ var abilities = function(){
 function show(page)
 {
 	var html = "";
-	 if (html === 'news')
-		{ html = 'news'; }
-	 else if (html === 'about')
-		{ html = 'about'; }
-	 else if (html === 'comingsoon')
-		{ html = 'comingsoon'; }
-	 else
-	 	{html = 'homepage';}
-
 	switch(page)
 	{
-		case "homepage": html = homePage;break;
-		case "comingsoon": html = comingsoonPage;break;
-		case "about": html = aboutPage;break;
-		case "news": html = newsPage;break;
-	    	default: html = homePage;
+		case "homepage": html = homePage; localStorage.setItem('html', 'homepage'); value='homepage'; break;
+		case "comingsoon": html = comingsoonPage; localStorage.setItem('html', 'comingsoon'); value='comingsoon'; break;
+		case "about": html = aboutPage; localStorage.setItem('html', 'about'); value='about'; break;
+		case "news": html = newsPage; localStorage.setItem('html', 'news'); value='news'; break;
+	    	default: html = homePage; localStorage.setItem('html', 'homepage'); value='homepage';
 	}
 	document.getElementById('center').innerHTML = html;
 	console.log(page);
@@ -207,21 +198,6 @@ Last Row<br/></p>';
 var comingsoonPage = "This is the coming soon page<br />...";
 var aboutPage = "This is the about page<br />...";
 var newsPage = "This is the news page<br />...";
-
-window.onload=function() { 
-	if (html === news) {
-	html = news;	
-	}
-	else if (html === about) {
-	html = about;	
-	}
-	else if (html === comingsoon) {
-	html = comingsoon;	
-	}
-	else {
-	html = news;	
-	}
-}
 
 // Weapon Selection
 var pistol = true;
@@ -249,6 +225,7 @@ var weaponList = function() {
     }
 };
 weaponList();
+
 var arrayRifle = (weaponTrue.indexOf("rifle") > -1);
 var arrayPistol = (weaponTrue.indexOf("pistol") > -1);
 var arrayShovel = (weaponTrue.indexOf("shovel") > -1);
@@ -298,4 +275,4 @@ default:
     weaponChoosing();
 }
 };
-weaponChoosing();
+// weaponChoosing();
