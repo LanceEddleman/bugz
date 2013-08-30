@@ -170,35 +170,23 @@ var abilities = function(){
 //	abilities()
 //};
 
+//	Display page information
 function show(page)
 {
-//	console.log('initial setting' + htmlActive);
-	var html = "";
-//	var htmlActive = page;
-//	console.log('afterset' + htmlActive);
+//	var html = "";
 	switch(page)
 	{
 		case "homepage": html = homePage;break;
 		case "comingsoon": html = comingsoonPage;break;
 		case "about": html = aboutPage;break;
 		case "news": html = newsPage;break;
-    	default: html = homePage;
-//        default: html = if (htmlActive = '')
-//                        {	default: html = homePage;  	}
-//                        else {  default: html = htmlActive;	}
-
+	    	default: html = homePage;
 	}
-//    if (htmlActive == '';){
-//    html = default;
-//    }
-//    else {
-//    html = page;
-//    }
 	document.getElementById('center').innerHTML = html;
 	console.log(page);
-//	console.log('after function' + htmlActive);
 }
 
+//	Pages
 var homePage = 'This is the homepage THIS ONE<br /> \
 ...<p>content center<br/>content center<br/> \
 ... das dashflajks hflaskjdh <br/> \
@@ -208,3 +196,19 @@ Last Row<br/></p>';
 var comingsoonPage = "This is the coming soon page<br />...";
 var aboutPage = "This is the about page<br />...";
 var newsPage = "This is the news page<br />...";
+
+window.onload=function() { 
+	if (html === news) {
+	html = news;	
+	}
+	else if (html === about) {
+	html = about;	
+	}
+	else if (html === comingsoon) {
+	html = comingsoon;	
+	}
+	else {
+	html = homepage;	
+	}
+}
+

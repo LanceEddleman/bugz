@@ -15,7 +15,7 @@
 		ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it needs to correct extra whiltespace between the links */ </style>
 		<![endif]-->
 	</head>
-<body onLoad="show();return false">
+<body onLoad="show();">
 	<div id="wrapper"><!-- wrapper start -->
 		<div id="header"><!-- header start -->
 			<div id="logoleft" class="logol bugzShadow">Cor-hay Jones</div>
@@ -31,10 +31,10 @@
 			<div id="rightcolumn" class="columnbasic">
 				<ul class="nav">
 					<li><a href="UI/bugz.html">Play BugZ!</a></li>
-					<li><a href="#" onclick="show('homepage');return false">Home</a></li>
-					<li><a href="#" onclick="show('news');return false">News</a></li>
-					<li><a href="#" onclick="show('about');return false">About</a></li>
-					<li><a href="#" onclick="show('comingsoon');return false">Coming Soon</a></li>
+					<li><a href="#homepage" onclick="show('homepage'); value='homepage';">Home</a></li>
+					<li><a href="#news" onclick="show('news'); value='news'">News</a></li>
+					<li><a href="#about" onclick="show('about'); value='about'">About</a></li>
+					<li><a href="#comingsoon" onclick="show('comingsoon');value='comingsoon'">Coming Soon</a></li>
 				</ul>
 				<!--<button onclick="window.location.href='UI/bugz.html'">Play BugZ!</button><br/>-->
 				<p>The information in this field will describe what the link above it do when you hover it shouuld ahve a background water mark image with the text floating over it.</p>
