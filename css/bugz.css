@@ -1,8 +1,7 @@
+/* *************** Base Settings *************** */ 
 @charset "UTF-8";
-/* ***** HTML and Body ***** */ 
-
 *{margin:0; padding:0; border:0; display:block;}
-
+/* *************** HTML and Body tags ********** */
 html,
 body {
 	position: absolute;
@@ -16,20 +15,18 @@ body {
 	bottom: 0;
 	overflow: auto;
 }
-
-/* ***** Wrapper ***** */ 
+/* *************** Wrapper *************** */ 
 #wrapper { /* wrapper surrounds all other divs giving percentage-based width. */
 	position: relative;
 	height: 100% !important;
 	min-height: 100% !important;
 	width: 80%; /* 80% of the screen size. */
 	max-width: 1260px;/* max-width desirable to keep layout from getting too wide on large monitors. */
-	min-width: 780px;/* min-width desirable to keep layout from getting too narrow. Also keeps line length more readable in columns. */
+	min-width: 800px;/* min-width desirable to keep layout from getting too narrow. Also keeps line length more readable in columns. */
 	margin: 0 auto 0 auto;
 	background-color: #123;
 }
-
-/* Header */
+/* *************** Header *************** */
 #header { /* Header has no width. Extends full width of layout. */
 	position: absolute;
 	width: 100%;
@@ -42,8 +39,7 @@ body {
 	background: #fff;
 	background: url('../images/background-overlay.png') top center repeat-x;
 }
-
-/* Content */
+/* *************** Content *************** */
 #content {
 	position: absolute;
 	top: 90px !important;
@@ -56,7 +52,7 @@ body {
 	overflow: auto;
 	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
 }
-/* Footer  */ 
+/* *************** Footer *************** */ 
 #footer {
 	position: absolute;
 	text-align: center;
@@ -69,8 +65,11 @@ body {
 	background: #fff;
 	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
 }
-
-/* ***** Header subset start ***** */ 
+/* *************** Colors *************** */ 
+.colorBG {background: #4E5869;}
+.colorColumns {background: #93A5C4;}
+.colorGameArea {background: #fff;}
+/* ********** Header subset start ********** */ 
 #logoleft {
 	float: left;
 	width: 20%;
@@ -93,8 +92,7 @@ body {
 	right: 0px;
 	width: 20%;
 }
-.logor {
-}
+.logor { }
 .bugzShadow {
 	color: #000;
 	text-shadow: 0 0 10px #fefcc9, 0 0 20px #feec85, 0 0 30px #ffae34, 0 0 40px #ec760c, 0 0 70px #cd4606, 0 0 80px #973716, 0 0 100px #451b0e, 0 0 150px #451b0e;
@@ -103,17 +101,15 @@ body {
 //	text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
 //	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;	
 }
-/* ***** Header subset end ***** */
+/* ********** Header subset end ********** */
 
-/* ***** Content subset start ***** */
+/* ********** Content subset start ********** */
 #leftcolumn {
 	float: left;
-	background: #93A5C4;
 }
 
 #rightcolumn {
 	float: right;
-	background: #93A5C4;
 }
 
 #center {
@@ -121,29 +117,25 @@ body {
 	width: 60% !important;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background: orange;
 }
 
 .columnbasic {
 	display: block;
-//	height: 90% !important;
 	min-height: 100% !important;
 	width: 20% !important;
 }
-/* ***** Content subset end ***** */
-/* ***** footer subset start ***** */
+/* ********** Content subset end ********** */
+/* ********** footer subset start ********** */
 #footerleft {
 	float: left;
 	width: 20% !important;
 	background: #6F7D94;
 }
-
 #footerright {
 	float: right;
 	width: 20% !important;
 	background: #6F7D94;
 }
-
 #footercenter {
 	float: left;
 	width: 60% !important;
@@ -151,7 +143,22 @@ body {
 	overflow-x: hidden;
 	background: #6F7D94;
 }
-/* ***** footer subset end ***** */
+.footer_text {
+	vertical-align: middle;
+	line-height: 35px;
+	font-size: 18px;
+	color: #4E5869;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.footer_clock {
+	vertical-align: middle;
+	line-height: 35px;
+	font-size: 14px;
+	color: #4E5869;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* ********** footer subset end ********** */
 .table{
 	display: table;
 }
@@ -170,7 +177,7 @@ body {
 }
 
 
-/* ~~ Element/tag selectors ~~ */
+/* *************** Element/tag selectors *************** */
 ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
 	padding: 0;
 	margin: 0;
@@ -186,7 +193,7 @@ a img { /* this selector removes the default blue border displayed in some brows
 	margin: none;
 }
 
-/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+/* ***** Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ***** */
 a:link {
 	color:#414958;
 	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
@@ -195,17 +202,17 @@ a:visited {
 	color: #4E5869;
 	text-decoration: underline;
 }
-a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+a:hover, a:active, a:focus { /* ***** this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. ***** */
 	text-decoration: none;
 }
 
 
-/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+/* ***** This grouped selector gives the lists in the .content area space ***** */
 .content ul, .content ol { 
 //	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
 }
 
-/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+/* ***** The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ***** */
 ul.nav {
 	list-style: none; /* this removes the list marker */
 	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */

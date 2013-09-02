@@ -188,7 +188,7 @@ function show(page)
 	console.log(page);
 }
 
-//	Pages
+// ****************** Pages ******************
 var homePage = 'This is the homepage THIS ONE<br /> \
 ...<p>content center<br/>content center<br/> \
 ... das dashflajks hflaskjdh <br/> \
@@ -198,7 +198,45 @@ Last Row<br/></p>';
 var comingsoonPage = "This is the coming soon page<br />...";
 var aboutPage = "This is the about page<br />...";
 var newsPage = "This is the news page<br />...";
+// ****************** PagesEnd ******************
+// ****************** TimeStamp ******************
+var buildCD = function() {
+var cdMonth = getMonth();
+var cdDate = getDate();
+var cdYear = getFullYear();
+	var clientDate = function(){
+		var displayDate = (cdMonth + '/' + cdDay + '/' + cdYear)
+		setInterval(displayDate, 500);
+		console.log(displayDate);
+	};
+};
+// ****************** Local Time *****************
+function date_time(id)
+{
+	var date = new Date;
+	var year = date.getFullYear();
+	var month = date.getMonth();
+	var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+	var d = date.getDate();
+	var day = date.getDay();
+	var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+	var h = date.getHours();
+	var dd='am'
+	console.log(h);
+	if(h<10) {h = "0"+h;}
+	if(h>12) {h = h-12; dd='pm';}
+	m = date.getMinutes();
+	if(m<10) {m = "0"+m;}
+	s = date.getSeconds();
+	if(s<10) {s = "0"+s;}
+// result = ''+months[month]+' '+d+', '+year+' '+'<br />'+''+days[day]+' '+' '+h+':'+m+':'+s+' '+dd;
+	result = ''+months[month]+' '+d+', '+year+' '+'<br />'+''+days[day]+' '+' '+h+':'+m+' '+dd;
+        document.getElementById(id).innerHTML = result;
+        setTimeout('date_time("'+id+'");','1000');
+        return true;
+}
 
+// ****************** TimeStampEnd ***************
 // Weapon Selection
 var pistol = true;
 var rifle = true;
@@ -224,7 +262,7 @@ var weaponList = function() {
         weaponTrue.push("shovel");
     }
 };
-weaponList();
+//weaponList();
 
 var arrayRifle = (weaponTrue.indexOf("rifle") > -1);
 var arrayPistol = (weaponTrue.indexOf("pistol") > -1);

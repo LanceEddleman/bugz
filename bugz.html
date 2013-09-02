@@ -15,7 +15,7 @@
 		ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it needs to correct extra whiltespace between the links */ </style>
 		<![endif]-->
 	</head>
-<body onLoad="show(localStorage.getItem('html'));">
+<body onLoad="show(localStorage.getItem('html')); date_time('date_time');">
 	<div id="wrapper"><!-- wrapper start -->
 		<div id="header"><!-- header start -->
 			<div id="logoleft" class="logol bugzShadow">Cor-hay Jones</div>
@@ -23,12 +23,12 @@
 			<div id="logocenter" class="logo_text">Welcome to <br/><span class="bugzShadow">BugZ!!!</span></div>
 		</div><!-- header end -->
 		<div id="content"><!-- content start -->
-			<div id="leftcolumn" class="columnbasic">
+			<div id="leftcolumn" class="columnbasic colorColumns">
 				<p>Backgrounds</p>
 				<p>Background information from the game, what the character knows going in.</p>
 				<!-- end .leftcolumn -->
 			</div>
-			<div id="rightcolumn" class="columnbasic">
+			<div id="rightcolumn" class="columnbasic colorColumns">
 				<ul class="nav">
 					<li><a href="UI/bugz.html">Play BugZ!</a></li>
 					<li><a href="#homepage" onclick="show('homepage');">Home</a></li>
@@ -42,16 +42,16 @@
 				<p>The Doctor..</p>
 				<!-- end .rightcolumn -->
 			</div>
-			<div id="center" class="columnbasic">
+			<div id="center" class="columnbasic colorGameArea">
 				<p>The information in this field will describe what the link above it do when you hover it shouuld ahve a background water mark image with the text floating over it.</p>
 				<p>This will look cool you will ike it once it is working.</p>
 				<p>The Doctor..</p>
 			</div>
 		</div><!-- content end -->
 		<div id="footer"><!-- footer start -->
-			<div id="footerleft" class="columnbasic">footer left</div>
-			<div id="footerright" class="columnbasic">footer time udpated</div>
-			<div id="footercenter" class="columnbasic">footer notes</div>
+			<div id="footerleft" class="columnbasic"></div>
+			<div id="footerright" class="columnbasic"><span id="date_time" class="footer_clock"></span></div>
+			<div id="footercenter" class="columnbasic footer_text bgColor">Website Design: Ozzland<br/>Game Design &amp; Concept: Cor-hay Jones &amp; Ozzland </div>
 		</div><!-- footer end -->
 		<div class="clearfloat"></div>
 	</div><!-- wrapper end -->
