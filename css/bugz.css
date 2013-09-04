@@ -36,7 +36,9 @@ body {
 	height: 90px;
 	line-height: 90px;
 	font-size: 23px;
-	background: #fff;
+}
+.hpheader {
+	background-color: #fff;
 	background: url('../images/background-overlay.png') top center repeat-x;
 }
 /* *************** Content *************** */
@@ -69,6 +71,7 @@ body {
 .colorBG {background: #4E5869;}
 .colorColumns {background: #93A5C4;}
 .colorGameArea {background: #fff;}
+.colorFooter {background: #6F7D94;};
 /* ********** Header subset start ********** */ 
 #logoleft {
 	float: left;
@@ -101,7 +104,6 @@ body {
 //	text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
 //	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;	
 }
-/* ********** Header subset end ********** */
 
 /* ********** Content subset start ********** */
 #leftcolumn {
@@ -124,24 +126,19 @@ body {
 	min-height: 100% !important;
 	width: 20% !important;
 }
-/* ********** Content subset end ********** */
+
 /* ********** footer subset start ********** */
 #footerleft {
 	float: left;
-	width: 20% !important;
-	background: #6F7D94;
 }
 #footerright {
 	float: right;
-	width: 20% !important;
-	background: #6F7D94;
 }
 #footercenter {
 	float: left;
 	width: 60% !important;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background: #6F7D94;
 }
 .footer_text {
 	vertical-align: middle;
@@ -157,8 +154,11 @@ body {
 	color: #4E5869;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+.footerbasic {
+	width: 20% !important;
+}
 
-/* ********** footer subset end ********** */
+/* ********** generic subset start ********** */
 .table{
 	display: table;
 }
@@ -175,7 +175,6 @@ body {
 	font-size: 1px;
 	line-height: 0px;
 }
-
 
 /* *************** Element/tag selectors *************** */
 ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
@@ -206,7 +205,6 @@ a:hover, a:active, a:focus { /* ***** this group of selectors will give a keyboa
 	text-decoration: none;
 }
 
-
 /* ***** This grouped selector gives the lists in the .content area space ***** */
 .content ul, .content ol { 
 //	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
@@ -232,3 +230,102 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 	background: #6F7D94;
 	color: #FFF;
 }
+
+/* ***************************************** Game Navigation **************************************** */
+ul.gnav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #123; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.gnav li {
+	border-bottom: 1px solid #123; /* this creates the button separation */
+}
+ul.gnav a, ul.gnav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	text-decoration: none;
+	background: #666;
+	color: #fff;
+}
+ul.gnav a:hover, ul.gnav a:active, ul.gnav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #F90;
+	color: #FFF;
+}
+
+/* **************************** GAME Tags **************************** */
+/* *************** HTML and Body tags ********** */
+
+/* *************** Wrapper *************** */ 
+
+/* *************** Game Header *************** */
+.gheader { /* Header has no width. Extends full width of layout. */
+	background: url('../images/bugzgTitle.png') left center no-repeat;
+	background-size:cover;
+}
+/* *************** Game Colors *************** */ 
+.gbody { background: #333; }
+.gwrapper { background-color: #000; }
+.gcolorColumns {background: #003; color:#fff;}
+.gcolorGameArea {background: #000; color:#fff;}
+.gcolorFooter {background: #093;};
+/* ********** Header subset start ********** */ 
+#logoleft {
+	float: left;
+	width: 20%;
+}
+.logol {
+}
+
+#logocenter {
+}
+.logo_text {
+	vertical-align: middle;
+	line-height: 45px;
+	font-size: 30px;
+	color: #4E5869;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#logoright {
+	float: right;
+	right: 0px;
+	width: 20%;
+}
+.logor { }
+.bugzShadow {
+	color: #000;
+	text-shadow: 0 0 10px #fefcc9, 0 0 20px #feec85, 0 0 30px #ffae34, 0 0 40px #ec760c, 0 0 70px #cd4606, 0 0 80px #973716, 0 0 100px #451b0e, 0 0 150px #451b0e;
+/* other shadow properties */
+//	text-shadow: -1px 0 #F87, 0 1px #F87, 1px 0 #F87, 0 -1px #F87;
+//	text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+//	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;	
+}
+
+/* ********** footer subset start ********** */
+#gfooterleft {
+	float: left;
+}
+#gfooterright {
+	float: right;
+}
+#gfootercenter {
+	float: left;
+	width: 60% !important;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.gfooter_text {
+	vertical-align: middle;
+	line-height: 35px;
+	font-size: 18px;
+	color: #4E5869;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.gfooter_clock {
+	vertical-align: middle;
+	line-height: 35px;
+	font-size: 14px;
+	color: #4E5869;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+

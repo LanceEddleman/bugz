@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<link href='http://fonts.googleapis.com/css?family=New+Rocker' rel='stylesheet' type='text/css'>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="DreamWeaver, EditPlus, IntelliJ">
+	<meta name="Author" content="Ozzland & Cor-hay Jones">
+	<meta name="Keywords" content="bugz">
+	<meta name="Description" content="Starter Game">
+	<title>BugZ!!!</title>
+	<link rel="stylesheet" type="text/css" href="../css/bugz.css" media="screen" charset="utf-8" />
+	<script type="text/javascript" language="JavaScript" src="../js/bugzg.js"></script>
+	<!--[if lte IE 7]>
+	<style> .content { margin-right: -1px; } /* this 1px negative margin can be placed on any of the columns in this layout with the same corrective effect. */
+	ul.nav a { zoom: 1; }  /* the zoom property gives IE the hasLayout trigger it needs to correct extra whiltespace between the links */ </style>
+	<![endif]-->
+</head>
+<body class="gbody" onLoad="show(localStorage.getItem('html')); gdate_time('gdate_time');">
+	<div id="wrapper" class="gwrapper"><!-- wrapper start -->
+		<div id="header" class="gheader logo_text"><!-- header start -->
+			<span id="welcome">Welcome </span><span id="characterName" class="bugzShadow"></span><span id="characterRank">: </span>
+		</div><!-- header end -->
+		<div id="content"><!-- content start -->
+			<div id="leftcolumn" class="columnbasic gcolorColumns">
+				<p>Section Title</p>
+				<p>Section Information</p>
+				<!-- end .leftcolumn -->
+			</div>
+			<div id="rightcolumn" class="columnbasic gcolorColumns">
+				<ul class="gnav">
+					<li><a href="../bugz.html">BugZ!! HomePage</a></li>
+					<li><a href="#inn" onclick="show('inn');">The Inn</a></li>
+					<li><a href="#loc1" onclick=" show('loc1');">Location 1</a></li>
+					<li><a href="#loc2" onclick="show('loc2');">Location 2</a></li>
+					<li><a href="#loc3" onclick="show('loc3');">Location 3</a></li>
+				</ul>
+				<!--<button onclick="window.location.href='UI/bugz.html'">Play BugZ!</button><br/>-->
+				<p>bottom section for inventory x slots with scroll multiple apges</p>
+				<!-- end .rightcolumn -->
+			</div>
+			<div id="center" class="columnbasic gcolorGameArea">
+				<p>dupilcate center for game id pass game id for all location images with hot links to quests</p>
+			</div>
+		</div><!-- content end -->
+		<div id="footer"><!-- footer start -->
+			<div id="gfooterleft" class="columnbasic gcolorFooter">health?</div>
+			<div id="gfooterright" class="columnbasic gcolorFooter"><span id="gdate_time" class="footer_clock"></span></div>
+			<div id="gfootercenter" class="columnbasic footer_text gcolorFooter">what info goes here</div>
+		</div><!-- footer end -->
+		<div class="clearfloat"></div>
+	</div><!-- wrapper end -->
+</body>
+</html>
