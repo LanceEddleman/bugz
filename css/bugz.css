@@ -257,6 +257,8 @@ ul.gnav a:hover, ul.gnav a:active, ul.gnav a:focus { /* this changes the backgro
 
 /* *************** Wrapper *************** */ 
 
+
+/* ************************************************************************************************ */
 /* *************** Game Header *************** */
 .gheader { /* Header has no width. Extends full width of layout. */
 	background: url('../images/bugzgTitle.png') left center no-repeat;
@@ -267,14 +269,13 @@ ul.gnav a:hover, ul.gnav a:active, ul.gnav a:focus { /* this changes the backgro
 .gwrapper { background-color: #000; }
 .gcolorColumns {background: #003; color:#fff;}
 .gcolorGameArea {background: #000; color:#fff;}
-.gcolorFooter {background: #093;};
+.gcolorFooter {background: #093;}
 /* ********** Header subset start ********** */ 
 #logoleft {
 	float: left;
 	width: 20%;
 }
-.logol {
-}
+.logol { }
 
 #logocenter {
 }
@@ -292,6 +293,7 @@ ul.gnav a:hover, ul.gnav a:active, ul.gnav a:focus { /* this changes the backgro
 	width: 20%;
 }
 .logor { }
+
 .bugzShadow {
 	color: #000;
 	text-shadow: 0 0 10px #fefcc9, 0 0 20px #feec85, 0 0 30px #ffae34, 0 0 40px #ec760c, 0 0 70px #cd4606, 0 0 80px #973716, 0 0 100px #451b0e, 0 0 150px #451b0e;
