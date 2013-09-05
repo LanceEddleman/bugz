@@ -17,15 +17,14 @@ function show(page)
 }
 
 // ****************** Pages ******************
-var homePage = 'This is the homepage THIS ONE<br /> \
-...<p>content center<br/>content center<br/> \
-... das dashflajks hflaskjdh <br/> \
-flaksjdh flsdjkfh lasdkjf halsdjkf halsdj fhlasdj fhlaskdjfh laskdjfh <br/>  \
-lasdkj fhalsd jkfaslh sdlaj fhsldkj hasdljk fhalsdkjh<br/>adfdsjhl <br/>  \
-Last Row<br/></p>';
-var comingsoonPage = "This is the coming soon page<br />...";
-var aboutPage = "This is the about page<br />...";
-var newsPage = "This is the news page<br />...";
+var homePage = "<p>This is the homepage.</p> \
+<p>The information in this field will describe what the link above it do when you hover it should have a background water mark image \
+with the text floating over it.</p> \
+<p>This will look cool you will like it once it is working.</p> \
+<p>- Supreme Overlord, Cor-hay Jones.</p> ";
+var comingsoonPage = "<p>This page is not done, please come back later.</p>";
+var aboutPage = "<p>This page will be the 'about' page.</p>";
+var newsPage = "News: We're working on it, come back later.<br />...";
 // ****************** PagesEnd ******************
 // ****************** TimeStamp ******************
 var buildCD = function() {
