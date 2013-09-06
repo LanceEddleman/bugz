@@ -16,17 +16,18 @@
 	<![endif]-->
 </head>
 <body class="gbody" onLoad="show(localStorage.getItem('html')); gdate_time('gdate_time');">
+	<div id="gwrapper" class="gwrappershading">
 	<div id="wrapper" class="gwrapper"><!-- wrapper start -->
-		<div id="header" class="gheader logo_text"><!-- header start -->
+		<div id="header" class="gheadercolor gopacity2 logo_text"><!-- header start -->
 			<span id="welcome">Welcome </span><span id="characterName" class="bugzShadow"></span><span id="characterRank">: </span>
 		</div><!-- header end -->
 		<div id="content"><!-- content start -->
-			<div id="leftcolumn" class="columnbasic gcolorColumns">
+			<div id="leftcolumn" class="columnbasic gcolorColumns gopacity">
 				<p>Section Title</p>
 				<p>Section Information</p>
 				<!-- end .leftcolumn -->
 			</div>
-			<div id="rightcolumn" class="columnbasic gcolorColumns">
+			<div id="rightcolumn" class="columnbasic gcolorColumns gopacity">
 				<ul class="gnav">
 					<li><a href="../bugz.html">BugZ!! HomePage</a></li>
 					<li><a href="#inn" onclick="show('inn');">The Inn</a></li>
@@ -38,16 +39,17 @@
 				<p>bottom section for inventory x slots with scroll multiple apges</p>
 				<!-- end .rightcolumn -->
 			</div>
-			<div id="center" class="columnbasic gcolorGameArea">
+			<div id="center" class="columnbasic gcolorGameArea gopacity">
 				<p>dupilcate center for game id pass game id for all location images with hot links to quests</p>
 			</div>
 		</div><!-- content end -->
 		<div id="footer"><!-- footer start -->
 			<div id="gfooterleft" class="columnbasic gcolorFooter">health?</div>
 			<div id="gfooterright" class="columnbasic gcolorFooter"><span id="gdate_time" class="footer_clock"></span></div>
-			<div id="gfootercenter" class="columnbasic footer_text gcolorFooter">what info goes here</div>
+			<div id="gfootercenter" class="columnbasic footer_text gcolorFooter"><p>what info goes here</p></div>
 		</div><!-- footer end -->
 		<div class="clearfloat"></div>
 	</div><!-- wrapper end -->
+	</div>
 </body>
 </html>
