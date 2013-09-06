@@ -1,4 +1,21 @@
+var aHardhat = 1;
+var aMinerClothes = 1;
+var aWorkBoots = 1;
+var aBelt = 1;
+var aGloves = 1;
+var aShovel = 1;
+var aPick = 1;
+var aPistol = 1;
+var aRifle = 1;
+var aMatches = 100;
+var aFlashlight = 1;
+var aBottledWater = 6;
+var aCannedMeat = 6;
 
+var dPistol = 1.25;
+var dRifle = 1.75;
+var dShovel = 0.5;
+var dPick = 0.75;
 
 var pistol = true;
 var rifle = true;
@@ -28,6 +45,8 @@ var arrayPick = (weaponTrue.indexOf("pick") > -1);
 
 var weaponChoosing = function() {
 weaponChoice = prompt("Choose your weapon: " + weaponTrue).toLowerCase();
+var weapon = "Weapon: " + weaponChoice;
+document.getElementById('weaponChoice').innerHTML = weapon;
 switch(weaponChoice) {
 case "pistol":
     if (arrayPistol){
@@ -70,6 +89,7 @@ default:
     weaponChoosing();
 }
 };
+var weaponDamage = 0;
 var loot = ["pistol", "shovel"];
 var attack = 0;
 var health = 250;
@@ -84,23 +104,41 @@ var zMinerDamage = 3;
 var zMinerArmor = 0;
 var pDamage = '';
 var encounters = function(){
+    if (weaponChoice === "pistol"){
+    weaponDamage = dPistol;
+    }
+    else if (weaponChoice === "rifle"){
+    weaponDamage = dRifle
+    }
+    else if (weaponChoice === "pick"){
+    weaponDamage = dPick
+    }
+    else if (weaponChoice === "shovel"){
+    weaponDamage = dShovel
+    }
     var pHit1 = Math.floor((Math.random()*11) + agility);
     var pHit2 = Math.floor((Math.random()*11) + luck);
     var pHit = pHit1 + pHit2;
-    var pRangeDamage1 = Math.floor((Math.random()*11) + perception);
-    var pRangeDamage2 = Math.floor((Math.random()*11) + luck);
+    var pRangeDamage1 = Math.floor((Math.random()*11) + perception * weaponDamage);
+    var pRangeDamage2 = Math.floor((Math.random()*11) + luck * weaponDamage);
     var pRangeDamage = pRangeDamage1 + pRangeDamage2;
-    var pMeleeDamage1 = Math.floor((Math.random()*11) + agility);
-    var pMeleeDamage2 = Math.floor((Math.random()*11) + agility);
+    var pMeleeDamage1 = Math.floor((Math.random()*11) + agility * weaponDamage);
+    var pMeleeDamage2 = Math.floor((Math.random()*11) + agility * weaponDamage);
     var pMeleeDamage = pMeleeDamage1 + pMeleeDamage2;
-    if (weaponChoice === "pistol"){
+    if (weaponChoice === "pistol" || "rifle"){
         pDamage = pRangeDamage;
     }
+    else if (weaponChoice === "shovel" || "pick"){
+        pDamage = pMeleeDamage;
+    }
 };
+
 var firstEncounter = function(){
     encounters();
-    attack = confirm("Do you attack, or run?");
+    console.log(pDamage)
+    attack = confirm("Do you attack? You've got " + health + " health left.");
     if (attack === true){
+        encounters();
         if (zMinerHealth > 0){
         zMinerHealth = zMinerHealth - pDamage;
         health = health - zMinerDamage;
@@ -111,19 +149,21 @@ var firstEncounter = function(){
         firstEncounter();
     }
     else{
-        var recieveLoot = confirm("You defeated the Miner! Click to recieve your loot.");
-        if (recieveLoot === true)
+        var receiveLoot = confirm("You defeated the Miner! Click to receive your loot.");
+        if (receiveLoot === true)
         {
-        var recievedLoot = loot[Math.floor(Math.random() * loot.length)];
-        var postmessage = "You've recieved a " + recievedLoot + "!";
+        var receivedLoot = loot[Math.floor(Math.random() * loot.length)];
+        var postmessage = "You've recieved a " + receivedLoot + "!";
         console.log(postmessage);
-        if (recievedLoot === "pistol"){
+        if (receivedLoot === "pistol"){
         pistol = true;
-        console.log(pistol)
+        aPistol = aPistol + 1;
+        console.log(aPistol)
         }
-        if (recievedLoot === "shovel"){
+        if (receivedLoot === "shovel"){
         shovel = true;
-        console.log(shovel)
+        aShovel = aShovel + 1;
+        console.log(aShovel)
         }
         }
     }
@@ -134,9 +174,3 @@ var firstEncounter = function(){
 };
 //weaponChoosing();
 //firstEncounter();
-
-var printstuff = function(){
-    var stuff = 400;
-    	document.getElementById('output').innerHTML = stuff;
-    	console.log(stuff);
-};

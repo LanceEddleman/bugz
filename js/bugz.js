@@ -10,6 +10,7 @@ function show(page)
 		case "comingsoon": html = comingsoonPage; localStorage.setItem('html', 'comingsoon'); value='comingsoon'; break;
 		case "about": html = aboutPage; localStorage.setItem('html', 'about'); value='about'; break;
 		case "news": html = newsPage; localStorage.setItem('html', 'news'); value='news'; break;
+		case "backstory": html = backstoryPage; localStorage.setItem('html', 'backstory'); value='backstory'; break;
 	    	default: html = homePage; localStorage.setItem('html', 'homepage'); value='homepage';
 	}
 	document.getElementById('center').innerHTML = html;
@@ -25,6 +26,24 @@ with the text floating over it.</p> \
 var comingsoonPage = "<p>This page is not done, please come back later.</p>";
 var aboutPage = "<p>This page will be the 'about' page.</p>";
 var newsPage = "News: We're working on it, come back later.<br />...";
+var backstoryPage = "<p>Infection Backstory:</p> \
+<p>Some miners were digging when they broke into an ancient tunnel, when they went exploring, they found some ruins. They were exploring \
+the ruins when the bugs found them. These werent regular bugs, they were much larger, and much more deadly. There were different types of bugs. \
+There were the large ones, the fighters. There were the smaller ones, which were the infection spreaders, and there were the medium sized ones, \
+which are the workers.</p> \
+<br/><p>Mine Backstory:</p> \
+<p>The (InsertMineNameHere) Mine was built to harvest Sephorium. Sephorium is a rare orange ore. When this ore is crushed, and added to water, it emits light. \
+Just like salt water, when you put the water out in the sun, it will start evaporate, leaving behind only the Sephorium. This makes the ore extremely useful, \
+and quite expensive.<\p> \
+<br/><p>Ruins Backstory:</p> \
+<p>The ruins were found when the miners broke into a tunnel system. They explored the tunnels, and found the ruins. Inside of the ruins, there is what looks \
+to be remains of a fight. There were weapons scattered across the floors, partly eaten corpses, and some very large bug shells. The shells were dog sized, and \
+were littered around the floor aswell as the corpses.<\p> \
+<br/><p>Town Backstory:</p> \
+<p>The town of (InsertTownNameHere) was a small mining town. It was built around the Sephorium mine, so that they could work there. \
+There are farms to sustain food, a large factory, nearby cities, a small military base,and basic town things, like houses, police station, \
+post office, small hospital, and a fire department.<\p> \
+<br/><p>-Supreme Overlord Cor-hay Jones</p>";
 // ****************** PagesEnd ******************
 // ****************** TimeStamp ******************
 var buildCD = function() {
