@@ -178,6 +178,9 @@ body {
 	font-size: 1px;
 	line-height: 0px;
 }
+.rfloat {	float: right;}
+.lfloat {	float: left;}
+
 
 /* *************** Element/tag selectors *************** */
 ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
@@ -304,16 +307,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 .gcolorBGWhite {background: #fff;}
 .gcolorFooter {background: #6F7D94;};
 .gwrapper { background-color: #000;}
-.gcolorColumns { background: #003;}
+/* .gcolorColumns { background: #003;} */
 .gcolorGameArea { background: #000;}
-.gcolorFooter { background-color:rgba(44, 163, 62, 0.35);}
 .gcolor { color:#fff;}
 .gopacity { opacity: 0.5;}
 .gopacity2 { opacity: 0.75;}
-.gopacity p { 
-
-	color:#fff;
+.gopacity p { color:#fff;}
+/* *************** Game Colors BG transparancies *************** */ 
+.gcolorHeader { background-color:rgba(0, 0, 0, 0.25);}
+.gcolorFooter { background-color:rgba(44, 163, 62, 0.35);}
+.gcolorFooterStats { 
+	background-color:rgba(0, 0, 0, 0.35);
+	line-height: 23px;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 14px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+.gcolorFooterClock { background-color:rgba(0, 0, 0, 0.35);}
+.gcolorColumns { background-color:rgba(117, 117, 117, 0.35);}
+.gcolorGameArea { background-color:rgba(150, 0, 0, 0.35);}
+.gcolorHealth { background-color:rgba(150, 0, 0, 0.35);}
+.gcolorStamina { background-color:rgba(150, 150, 0, 0.35);}
+.gcolorExp { background-color:rgba(75, 0, 150, 0.35);}
 /* ********** Header subset start ********** */ 
 #logoleft {
 	float: left;
