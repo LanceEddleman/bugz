@@ -8,7 +8,6 @@
 	<meta name="Author" content="Ozzland & Cor-hay Jones">
 	<meta name="Keywords" content="bugz">
 	<meta name="Description" content="Starter Game">
-	<title>BugZ!!!</title>
 	<link rel="stylesheet" type="text/css" href="../css/bugz.css" media="screen" charset="utf-8" />
 	<script type="text/javascript" language="JavaScript" src="../js/bugzg.js"></script>
 	<!--[if lte IE 7]>
@@ -18,9 +17,13 @@
 </head>
 <body class="gbody" onLoad="show(localStorage.getItem('html')); gdate_time('gdate_time');">
 	<div id="gwrapper" class="gwrappershading">
-	<div id="wrapper" class="gwrapper"><!-- wrapper start -->
-		<div id="header" class="gcolorHeader logo_text"><!-- header start -->
-			<span id="welcome">Welcome </span><span id="characterName" class="bugzShadow"></span><span id="characterRank">: </span>
+	<div id="gwrapper-inner" class="gwrapper"><!-- wrapper start -->
+		<div id="gheader" class="gcolorHeader logo_text clearfloat"><!-- header start -->
+				<div>
+				<div id="welcome" class="ghWelcome tcenter lfloat">Welcome&nbsp; &nbsp;</div>
+				<div id="characterName" class="bugzShadow ghName tcenter lfloat">X</div>
+				<div id="characterRank" class="ghRank tcenter lfloat">&nbsp; &nbsp;Travler</div>
+				</div>
 		</div><!-- header end -->
 		<div id="content"><!-- content start -->
 			<div id="leftcolumn" class="columnbasic gcolorColumns">
@@ -46,10 +49,9 @@
 		</div><!-- content end -->
 		<div id="footer"><!-- footer start -->
 			<div id="gfooterleft" class="columnbasic gcolorFooterStats">
-				<p>Health: <span id="health" class="gcolorHealth rfloat">123/150</span><br/>
-				Stamina: <span id="stamina" class="gcolorStamina rfloat">55/100</span><br/>
-				Experience: <span id="experience" class="gcolorExp rfloat">1425/2000</span>
-				</p>
+				<div id="health"><div class="health tcenter lfloat">Health:</div><div class="health gcolorHealth rfloat">123/150</div></div><br/>
+				<div id="stamina"><div class="stamina tcenter lfloat">Stamina:</div><div class="stamina gcolorStamina rfloat">55/100</div></div><br/>
+				<div id="experience"><div class="experience tcenter lfloat">Experience:</div><div class="experience gcolorExp rfloat">1425/2000</div></div>
 			</div>
 			<div id="gfooterright" class="columnbasic gcolorFooterClock"><span id="gdate_time" class="footer_clock"></span></div>
 			<div id="gfootercenter" class="columnbasic footer_text gcolorFooter"><p>what info goes here</p></div>

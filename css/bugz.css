@@ -16,6 +16,8 @@ body {
 	bottom: 0;
 	overflow: auto;
 }
+title {display:none;}
+
 /* *************** Wrapper *************** */ 
 #wrapper { /* wrapper surrounds all other divs giving percentage-based width. */
 	position: relative;
@@ -261,16 +263,37 @@ ul.gnav a:hover, ul.gnav a:active, ul.gnav a:focus { /* this changes the backgro
 /* **************************** GAME Tags **************************** */
 /* *************** HTML and Body tags ********** */
 
-/* *************** Wrapper *************** */ 
-
-
+/* *************** Game Wrapper *************** */ 
+#gwrapper-inner { /* wrapper surrounds all other divs giving percentage-based width. */
+	position: relative;
+	height: 100% !important;
+	min-height: 100% !important;
+	width: 80%; /* 80% of the screen size. */
+	max-width: 1260px;/* max-width desirable to keep layout from getting too wide on large monitors. */
+	min-width: 800px;/* min-width desirable to keep layout from getting too narrow. Also keeps line length more readable in columns. */
+	margin: 0 auto 0 auto;
+//	background-color: #123;
+}
 /* ************************************************************************************************ */
 /* *************** Game Header *************** */
-.gheader { /* Header has no width. Extends full width of layout. */
-//	background: url('../images/bugzgTitle.png') center center no-repeat;
-//	background-size:cover;
+/* *************** Header *************** */
+#gheader { /* Header has no width. Extends full width of layout. */
+	position: absolute;
+	text-align: center !important;
+	width: 100%;
+	max-width: 1260px;/* max-width desirable to keep layout from getting too wide on large monitors. */
+	min-width: 780px;/* min-width desirable to keep layout from getting too narrow. Also keeps line length more readable in columns. */
+	height: 90px;
+	line-height: 90px;
+	font-size: 25px;
+	margin: 0 auto 0 auto;
 }
-.gheadercolor { background: #000;}
+.gheader { /* Header has no width. Extends full width of layout. */}
+
+.ghWelcome {}
+.ghName {}
+.ghRank {}
+
 /* *************** Game Colors *************** */ 
 .gbody {
 	background: #000;
@@ -279,15 +302,6 @@ ul.gnav a:hover, ul.gnav a:active, ul.gnav a:focus { /* this changes the backgro
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-.gwrappershading {
-background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 80%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(20%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0)), color-stop(80%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%); /* IE10+ */
-background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
 }
 
 #gwrapper {
@@ -298,37 +312,80 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 	max-width: 100%;/* max-width desirable to keep layout from getting too wide on large monitors. */
 	min-width: 1260px;/* min-width desirable to keep layout from getting too narrow. Also keeps line length more readable in columns. */
 	margin: 0 auto 0 auto;
-//	background-color: #123;
 }
+
+.gwrappershading {
+background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 80%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(20%,rgba(0,0,0,0)), color-stop(50%,rgba(0,0,0,0)), color-stop(80%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 20%,rgba(0,0,0,0) 50%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+}
+
 /* *************** Game Colors *************** */ 
 .gcolorBG {background: #4E5869;}
 .gcolorBGdarkblue {background-color: #123;}
 .gcolorColumns {background: #93A5C4;}
 .gcolorBGWhite {background: #fff;}
-.gcolorFooter {background: #6F7D94;};
+.gcolorFooter {};
 .gwrapper { background-color: #000;}
-/* .gcolorColumns { background: #003;} */
 .gcolorGameArea { background: #000;}
 .gcolor { color:#fff;}
 .gopacity { opacity: 0.5;}
 .gopacity2 { opacity: 0.75;}
 .gopacity p { color:#fff;}
 /* *************** Game Colors BG transparancies *************** */ 
-.gcolorHeader { background-color:rgba(0, 0, 0, 0.25);}
-.gcolorFooter { background-color:rgba(44, 163, 62, 0.35);}
+.gcolorHeader { background-color:rgba(155, 0, 0, 0.25);}
+.gcolorFooter { background-color:rgba(0, 0, 0, 0.5);}
 .gcolorFooterStats { 
 	background-color:rgba(0, 0, 0, 0.35);
-	line-height: 23px;
+	line-height: 18px;
 	font-family: 'Noto Sans', sans-serif;
 	font-size: 14px;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-align: center;
 }
 .gcolorFooterClock { background-color:rgba(0, 0, 0, 0.35);}
 .gcolorColumns { background-color:rgba(117, 117, 117, 0.35);}
-.gcolorGameArea { background-color:rgba(150, 0, 0, 0.35);}
-.gcolorHealth { background-color:rgba(150, 0, 0, 0.35);}
-.gcolorStamina { background-color:rgba(150, 150, 0, 0.35);}
-.gcolorExp { background-color:rgba(75, 0, 150, 0.35);}
+.gcolorGameArea {  background-color:rgba(0, 0, 0, 0.2);
+//	background-color:rgba(150, 0, 0, 0.35);
+}
+.tcenter { text-align: center;}
+
+#health {
+	width: 100% !important;
+	margin-top: 6px;
+}
+.health {
+	width: 50% !important;
+	height: 20px !important;
+}
+.gcolorHealth { 
+	background-color:rgba(150, 0, 0, 0.35);
+	font-size: 10px;
+}
+
+#stamina { width: 100% !important;}
+.stamina { 
+	width: 50% !important;
+	height: 20px !important;
+}
+.gcolorStamina {
+	background-color:rgba(150, 150, 0, 0.35);
+	font-size: 10px;
+}
+
+#experience { width: 100% !important;}
+.experience { 
+	width: 50% !important;
+	height: 20px !important;
+}
+.gcolorExp {
+	background-color:rgba(75, 0, 150, 0.35);
+	font-size: 10px;
+}
 /* ********** Header subset start ********** */ 
 #logoleft {
 	float: left;
@@ -365,6 +422,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 /* ********** footer subset start ********** */
 #gfooterleft {
 	float: left;
+	text-align: center;
 }
 #gfooterright {
 	float: right;

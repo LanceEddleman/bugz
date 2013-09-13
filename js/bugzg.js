@@ -1,4 +1,6 @@
 // JavaScript Document
+var title = "BugZ!!!";
+document.title = title;
 
 // Item Stats
 //w = weight, a = amount, i = inventory, d = damage,

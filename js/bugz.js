@@ -1,5 +1,6 @@
 // JavaScript Document
-
+var title = "BugZ!!!";
+document.title = title;
 //	Display page information
 function show(page)
 {
