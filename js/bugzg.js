@@ -175,81 +175,9 @@ var abilities = function(){
 //};
 
 // Weapon Selection
-var pistol = true;
-var rifle = true;
-var pick = true;
-var shovel = true;
-var weaponTrue = [];
-
-var weaponList = function() {
-    if (pistol === true){
-        console.log("pistol");
-        weaponTrue.push("pistol");
-    }
-    if (rifle === true){
-        console.log("rifle");
-        weaponTrue.push("rifle");
-    }
-    if (pick === true){
-        console.log("pick");
-        weaponTrue.push("pick");
-    }
-    if (shovel === true){
-        console.log("shovel");
-        weaponTrue.push("shovel");
-    }
-};
 
 //weaponList();
-var arrayRifle = (weaponTrue.indexOf("rifle") > -1);
-var arrayPistol = (weaponTrue.indexOf("pistol") > -1);
-var arrayShovel = (weaponTrue.indexOf("shovel") > -1);
-var arrayPick = (weaponTrue.indexOf("pick") > -1);
 
-var weaponChoosing = function() {
-var weaponChoice = prompt("Choose your weapon: " + weaponTrue).toLowerCase();
-switch(weaponChoice) {
-case "pistol":
-    if (arrayPistol){
-    console.log("You're armed with your " + weaponChoice + "!");
-    }
-    else {
-    console.log("Object not found, try again.");
-    weaponChoosing();
-    }
-    break;
-case "rifle":
-    if (arrayRifle){
-    console.log("You're armed with your " + weaponChoice + "!");
-    }
-    else {
-    console.log("Object not found, try again.");
-    weaponChoosing();
-    }
-    break;
-case "shovel":
-    if (arrayShovel){
-    console.log("You're armed with your " + weaponChoice + "!");
-    }
-    else {
-    console.log("Object not found, try again.");
-    weaponChoosing();
-    }
-    break;
-case "pick":
-    if (arrayPick){
-    console.log("You're armed with your " + weaponChoice + "!");
-    }
-    else {
-    console.log("Object not found, try again.");
-    weaponChoosing();
-    }
-    break;
-default:
-    console.log("Object not found, try again.");
-    weaponChoosing();
-}
-};
 // weaponChoosing();
 
 //	Display Location Information
